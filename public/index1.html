@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    let start = Date.now()
+  </script>
+  <meta charset="UTF-8">
+  <script src="A.js?t=10"></script>
+  <script src="B.js?t=1"></script>
+</head>
+<body>
+  <h1 class="clock">h1</h1>
+  <link rel="stylesheet" href="a.css?t=1">
+  <link rel="stylesheet" href="b.css?t=5">
+  <script>
+    const $clock = document.querySelector('.clock')
+    function setTime() {
+      $clock.innerText = Date.now() - start
+    }
+    setInterval(setTime, 100)
+  </script>
+</body>
+</html> 
